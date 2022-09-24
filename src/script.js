@@ -51,11 +51,11 @@ doorColorTextureLoader.magFilter = THREE.NearestFilter;
 
 const doorlight = new THREE.PointLight('red', 0.5, 7);
 
-const ghostlight1 = new THREE.PointLight('red', 0.5, 7);
+const ghostlight1 = new THREE.PointLight('red', 1, 7);
 
-const ghostlight2 = new THREE.PointLight('pink', 0.5, 7);
+const ghostlight2 = new THREE.PointLight('pink', 1, 7);
 
-const ghostlight3 = new THREE.PointLight('pink', 0.5, 7);
+const ghostlight3 = new THREE.PointLight('pink', 1, 7);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(1, 32, 10),
@@ -255,7 +255,7 @@ gui.add(ambientLight, 'intensity').min(0).max(1).step(0.001);
 scene.add(ambientLight);
 
 // Directional light
-const moonLight = new THREE.DirectionalLight('#ffffff', 0);
+const moonLight = new THREE.DirectionalLight('red', 0);
 moonLight.position.set(2.5, 6.5, -13.5);
 
 gui.add(moonLight, 'intensity').min(0).max(1).step(0.001);
